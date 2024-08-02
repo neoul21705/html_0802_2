@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>철인삼종</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap {width: 100%;}
+
+        h1 {text-align:center; background: #666; color: #fff; padding: 20px 0;}
+        form {width: 95%; margin: 0 auto;}
+        label {display: block; background-color: yellowgreen; padding: 10px 20px; color: #fff;
+        border-radius: 10px; margin: 20px 0; }
+        label:nth-of-type(2) {margin: 20px 0;}
+
+        .view {transition: all 0.5s ease; opacity: 0;}
+        span {padding: 0 10px; font-size: 14px;}
+        button {margin: 10px 0;border: none; border-radius: 8px; background-color: deepskyblue;color: #fff; padding: 5px 10px;}
+
+        .imgbox {width: 500px; height: 300px; border-radius: 20px; overflow: hidden; position: relative;}
+        .imgbox img {width: 100%; height: 100%; position:absolute; top: 0; left: 0;}
+        .imgbox img:not(:first-child) {display: none;}
+
+        input[type="radio"] {margin: 10px 0;}
+        input[value="수영"]:checked ~ .imgbox img[alt="수영"] {display: block;}
+        input[value="사이클"]:checked ~ .imgbox img[alt="사이클"] {display: block;}
+        input[value="마라톤"]:checked ~ .imgbox img[alt="마라톤"] {display: block;}
+        input[type="checkbox"]:checked ~.view {opacity: 1;}
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>철인삼종</h1>
+        <form>
+            <label>선택을 시작하겠습니까?</label>
+            <input type="checkbox" value="start">
+            <span class="start">시작함</span>
+            <div class="view">
+                <label>원하는 종목은?</label>
+                <input type="radio" name="mum" value="수영" checked> <span>수영</span> <br> 
+                <input type="radio" name="mum" value="사이클" > <span>사이클</span> <br> 
+                <input type="radio" name="mum" value="마라톤" > <span>마라톤</span> <br> 
+                <button type="button" onclick="">선택 완료</button>
+
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3dpbXxlbnwwfHwwfHx8MA%3D%3D" alt="수영">
+                    <img src="https://images.unsplash.com/photo-1533561052604-c3beb6d55b8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVEJTg4JUFDJUVCJUE1JUI0JTIwJUVCJTkzJTlDJTIwJUVEJTk0JTg0JUVCJTlFJTkxJUVDJThBJUE0fGVufDB8fDB8fHww" alt="사이클">
+                    <img src="https://plus.unsplash.com/premium_photo-1664304823165-888f56fc101b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8JUVCJUE3JTg4JUVCJTlEJUJDJUVEJTg2JUE0fGVufDB8fDB8fHww" alt="마라톤">
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+</html>
